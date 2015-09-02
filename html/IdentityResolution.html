@@ -1,0 +1,209 @@
+<html>
+<head>
+<title>rmtoo</title>
+<meta name="generator" content="rmtoo">
+<style type="text/css">
+<!--
+h1, h2, h3 {
+   font-family:sans;
+}
+
+a:link, a:visited, a:active, a:hover { 
+   text-decoration:none;
+   font-weight:bold;
+   color:#407cbf;
+}
+
+.fltext {
+   font-family:sans;
+}
+
+.footer_text {
+   font-family:sans;
+   font-size:small;
+}
+
+.requirment_end {
+   background-image:url(../trenner01.png); 
+   margin:0px; 
+   padding:0px;
+   height:2px;
+}
+
+.dlt_description {
+   font-family:sans;
+   font-size:medium;
+   font-weight:bold;
+}
+
+.dlv_description {
+   font-family:sans;
+   font-size:medium;
+}
+
+.dlt_rationale {
+   font-family:sans;
+   font-weight:bold;
+}
+
+.dlv_rationale {
+   font-family:sans;
+}
+
+.dlt_note {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_note {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_depends_on {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_depends_on {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_dependent {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_dependent {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_id {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_id {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_priority {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_priority {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_owner {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_owner {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_invented_on {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_invented_on {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_invented_by {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_invented_by {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_status {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_status {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_class {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_class {
+   font-family:sans;
+   font-size:small;
+}
+
+-->
+</style>
+</head>
+<body>
+<h2>Identity Resolution</h2>
+<p><span class="fltext">This section contains the requirements of the functionality of  identifying the sending vessels of messages that are received in a message report stream.</span></p>
+
+<!- REQ 'Map0BusinessIdentifier' -->
+<h3><a name="Map0BusinessIdentifier">Mapping Vessels to Business Identifiers</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> maintain a mapping between logical vessel identifiers that are referring  to existing physical vessels and business identifers that are used in the maritime world to  identify vessels taking into consideration the dynamic nature of  business identifiers.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>Business identifiers in the maritime world are assigned by different organization in different countries over different continents.  Business identifiers might change for a given physical vessel and the same business identifer that was once assigned to a certain vessel might be reassigned to a different vessel in the future. Errors might be introduced in the assignment of  business identifiers that might take some time to be resolved by the assigning authority.  <i>IDRES</i> must be prepared to handle such and similar cases  and maintain a consistent database of identifiers that will be consulted  and regarded as a central source of truth by the service consumers.</p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="ReqsDocument.html#Idres">Idres</a></span></dd><dt><span class="dlt_dependent">Dependent</span></dt><dd><span class="dlv_dependent"><a href="IdentityResolution.html#MapLogicalIdentifier">MapLogicalIdentifier</a>, <a href="IdentityResolution.html#MapMessageStreamResolution">MapMessageStreamResolution</a>, <a href="IdentityResolution.html#MapReqBusinessTimestampToPeriod">MapReqBusinessTimestampToPeriod</a>, <a href="IdentityResolution.html#MapReqLogicalPeriodToListofBusinessPeriod">MapReqLogicalPeriodToListofBusinessPeriod</a>, <a href="IdentityResolution.html#MapStreamExtensibility">MapStreamExtensibility</a>, <a href="IdentityResolution.html#MapStreamTypeAis">MapStreamTypeAis</a>, <a href="IdentityResolution.html#MapStreamTypeLrit">MapStreamTypeLrit</a>, <a href="IdentityResolution.html#MapStreamTypeVms">MapStreamTypeVms</a>, <a href="IdentityResolution.html#MapTimeDimension">MapTimeDimension</a>, <a href="IdentityResolution.html#MapUnambiguity">MapUnambiguity</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">Map0BusinessIdentifier</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'MapLogicalIdentifier' -->
+<h3><a name="MapLogicalIdentifier">Vessel Identifier</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> introduce the concept of a logical vessel identifier that uniquely identifies a single physical vessel that  exists or existed during a certain period of time.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>None of the existing business identifiers in the maritime world is suitable to uniquely identify all tracked vessels. Therefore a new   internal identifier needs to be created for the purpose, the values of which  are unique and provide a clear one-to-one mapping between physical vessels and identifier values. </p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="IdentityResolution.html#Map0BusinessIdentifier">Map0BusinessIdentifier</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">MapLogicalIdentifier</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'MapMessageStreamResolution' -->
+<h3><a name="MapMessageStreamResolution">Resolving Identity of Senders in a Message Stream</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> provide a service for its  consumers that resolves the identity of senders of messages in a  continuous message stream taking into consideration the related performance requirements.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>The frequency of messages in the incoming streams depends on several factors like the number of reporting vessels, the reporting frequency of individual vessels, the coverage of the message receivers, etc. These factors vary between reporting systems and in general there are no well defined upper limits. Hence the identify resolution should be optimized for performance in order to be able to keep up with the message rate of the stream.</p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">Message reports are normally sent by a specific onboard device at a certain rate. The message contains certain business identifiers that are assigned to the vessel. These identifiers can be used to correlate subsequent messages from the same vessel. The business identifiers  change infrequently if at all during the lifetime of the vessel. The total number of tracked vessels is expected to grow slowly over time.  Hence the size of the database that contains all the business identifiers for all the tracked vessels together with their history is relatively small and slowly extending. It is expected to be feasible to replicate this entire dataset within a few seconds and keep it synchronized with  the central source over the network with a minimal resource requirements.  This could be one possible way to achieve the required performance  of performing identity resolution at the rate of the message stream.</span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="IdentityResolution.html#Map0BusinessIdentifier">Map0BusinessIdentifier</a></span></dd><dt><span class="dlt_dependent">Dependent</span></dt><dd><span class="dlv_dependent"><a href="IdentityResolution.html#MapReqBusinessTimestampToPeriod">MapReqBusinessTimestampToPeriod</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">MapMessageStreamResolution</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'MapReqBusinessTimestampToPeriod' -->
+<h3><a name="MapReqBusinessTimestampToPeriod">Resolving Logical Identifier from Business Identifer and Timestamp</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> provide a service that takes a certain business identifer and a given timestamp as the input  and responds with the logical identifier of the vessel that  the given business identifier was assigned to at the given point in time. Similar service must be provided for all supported business identifers.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>The reponse to these requests will contain the logical identifer  of the vessel that is or was trasmitting the given business identifer  at the given point of time. These requests will be used by applications that are processing  message streams or historical messages in a certain area.  The implmentation must be optimized for performance as the requests can be frequent depending on the  volume of messages delivered by the stream or the activity of users accessing historical data.</p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="IdentityResolution.html#Map0BusinessIdentifier">Map0BusinessIdentifier</a>, <a href="IdentityResolution.html#MapMessageStreamResolution">MapMessageStreamResolution</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">MapReqBusinessTimestampToPeriod</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'MapReqLogicalPeriodToListofBusinessPeriod' -->
+<h3><a name="MapReqLogicalPeriodToListofBusinessPeriod">Resolving the Business Identifiers from Logical Identifer and Time Period </a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> implement an endpoint that provides  all the business identifiers that were transmitted by a vessel with the  given logical identifer over a given period of time. </span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>These queries will be used used by applications that need to reconstruct the track of poisitions of a  vessel that is identified by its logical identifer. The  service must provid a corresponding query of this kind for all the  supported business identifer domains. As some business identifers  of a single physical vessel might  change over time, the response must contain a all the  business identifers that were transmitted by the vessel  during the given time period.</p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">Since the business identifiers are changing infrequently the  response will contain no more than one identifier in most of the cases. Still, it is possible that a request will be made over a time period during which the requested vessel did change its business identifier. In order to correctly handle this case the API must be defined in a way  so that it can respond with more than on identifer together with the  corresponding time period.</span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="IdentityResolution.html#Map0BusinessIdentifier">Map0BusinessIdentifier</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">MapReqLogicalPeriodToListofBusinessPeriod</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'MapStreamExtensibility' -->
+<h3><a name="MapStreamExtensibility">Extensible Message Stream Support</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> provide support for developing modules that support messages streams that are not specifically  defined in this document.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>It is likely that the service will need to process further  message streams in the future apart from the ones that are specifically  mentioned in this document. Theferore the implemention must provide  extension points to add support for new message sources. The development of such modules must be supported by documentation and examples. </p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">Ideally the support for message streams that are specifically mentioned in their own requirements should all be built upon a common base component that provides generic support  for stream based data. This way the particular implementations could serve as a reference for developing further modules of the same kind.</span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="IdentityResolution.html#Map0BusinessIdentifier">Map0BusinessIdentifier</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">MapStreamExtensibility</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'MapStreamTypeAis' -->
+<h3><a name="MapStreamTypeAis">AIS Message Stream Support</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> support identity resolution for  senders of messages in an AIS stream</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>The AIS system defines several different types of messages that are transmitted by vessels and coastal stations. The primary business identifier found in the AIS messages is the MMSI number. The MMSI number is  a 9-digit decimal number. The first three digits correspond to the flag  state of the vessel. The MMSI number can change over the lifetime of the  vessel, for example when the vessel changes flag state. MMSI numbers can be reused, meaning that an MMSI that was once assigned to a certain vessel might be assigned to a different one at a later point in time. </p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="IdentityResolution.html#Map0BusinessIdentifier">Map0BusinessIdentifier</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">MapStreamTypeAis</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'MapStreamTypeLrit' -->
+<h3><a name="MapStreamTypeLrit">LRIT Message Stream Support</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> support the resolution of the  identity of the sender of messages in the LRIT messages stream.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>Normally LRIT messages are sent once per 6 hours and contain the IMO number as the primary identifier of the vessel. The IMO number is  a numberic value (fits a 32 bit integer) and is assigned to the  vessel for its entire lifetime. IMO numbers are not reused.</p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="IdentityResolution.html#Map0BusinessIdentifier">Map0BusinessIdentifier</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">MapStreamTypeLrit</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'MapStreamTypeVms' -->
+<h3><a name="MapStreamTypeVms">VMS Message Stream Support</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> support the identity resolution of senders of VMS messages</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>VMS messages are sent by certain fishing vessels at a frequency  of about 1 message per one or two hours. For European vessels the primary business identifer in VMS messages is the IR number. The IR number is  a sequence of 12 alphanumeric characters, the first three being letters and the last 9 being digits. For the vessels that do not have an IR number the primary busiess identifer to be used in a VMS message is the radio  call sign. The radio call sign is a sequence of alphanumeric characters of a maximum lenght of 7 and it can change over the lifetime of a vessel. Radio call sign can be reassigned to different vessels when they are no  longer used. </p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">In practice the IR nubmers do not always respect the standar pattern. It might be safer to expect 12 alphanumeric characters without any further  restrictions. It is not yet known if the IR number can change or be reused.  For now it is safest to assume that it can.</span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="IdentityResolution.html#Map0BusinessIdentifier">Map0BusinessIdentifier</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">MapStreamTypeVms</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'MapTimeDimension' -->
+<h3><a name="MapTimeDimension">Time Dimension in Mapping Database</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> provide services that resolve  the identity of a vessel in the context of a certain point or period of time.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>Business identifiers can change during the lifecycle of a vessel. The other way is also possible, that is, the same business identifier  can possibly be assigned to different vessels during different periods of  time. Some service consumers will want to resolve the identity of the sender  of messages that arrived at some point in the past. In other cases the  service consumer will want to know the business identifiers that were assigned to a certain physical vessel over a particular period of time.  In order to support these requirements the <i>IDRES</i> must store in its  database not only the latest state of mapping between business and logical identifiers but also the history as it has changed over time. The requests and responses that the service supports must also reflect this by including the dimension of time.</p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="IdentityResolution.html#Map0BusinessIdentifier">Map0BusinessIdentifier</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">MapTimeDimension</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'MapUnambiguity' -->
+<h3><a name="MapUnambiguity">Unambiguous Identity Resolution</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> provide services that give  unambiguous responses to vessel identity resolution requests.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>In many scenarios the service consumers will not have the  opportunity to perform any manual resolution or even automated procedures that take considerably long time. This is the case for example when a component is processing a stream with a high message rate. In these cases that consumer will require that the service provides the identitiy of a certain vessel  on a best effort basis. It might well be possible that a later  request to the service with the same input leads to a different result, for example because in the meanwhile the service had received further  information and updated its database accordingly. This is because in some cases the information that is necessary to correctly identify the sender of a  certain message will reach the <i>IDRES</i> later than the message  itself is first processed. The service consumers must be prepared to  handle such cases. </p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="IdentityResolution.html#Map0BusinessIdentifier">Map0BusinessIdentifier</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">MapUnambiguity</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div><hr/>
+<span class="footer_text"><p>This document is part of the rmtoo
+requirements documentation and was generated
+by <a href="http://rmtoo.gnu4u.org">rmtoo</a> itself.</p>
+<p>rmtoo is copyright 2010 by flonatel. rmtoo is distributed under
+GPL V3.</p></span>
+</body>
+</html>

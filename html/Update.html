@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>rmtoo</title>
+<meta name="generator" content="rmtoo">
+<style type="text/css">
+<!--
+h1, h2, h3 {
+   font-family:sans;
+}
+
+a:link, a:visited, a:active, a:hover { 
+   text-decoration:none;
+   font-weight:bold;
+   color:#407cbf;
+}
+
+.fltext {
+   font-family:sans;
+}
+
+.footer_text {
+   font-family:sans;
+   font-size:small;
+}
+
+.requirment_end {
+   background-image:url(../trenner01.png); 
+   margin:0px; 
+   padding:0px;
+   height:2px;
+}
+
+.dlt_description {
+   font-family:sans;
+   font-size:medium;
+   font-weight:bold;
+}
+
+.dlv_description {
+   font-family:sans;
+   font-size:medium;
+}
+
+.dlt_rationale {
+   font-family:sans;
+   font-weight:bold;
+}
+
+.dlv_rationale {
+   font-family:sans;
+}
+
+.dlt_note {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_note {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_depends_on {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_depends_on {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_dependent {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_dependent {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_id {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_id {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_priority {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_priority {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_owner {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_owner {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_invented_on {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_invented_on {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_invented_by {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_invented_by {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_status {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_status {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_class {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_class {
+   font-family:sans;
+   font-size:small;
+}
+
+-->
+</style>
+</head>
+<body>
+<h2>Updating the Database</h2>
+<p><span class="fltext">This section contains requirements about updates to the database of  the service </span></p>
+
+<!- REQ 'Upd0Update' -->
+<h3><a name="Upd0Update">Updating the Database</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> provide facilities to continuously  update its database by using the information that is retrieved from external data sources.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>The database of the service needs to be continuously updated in order to correctly reflect the actual attributes and status of the  vesseld that it is modelling. The updated state must be reflected in the  responses that are sent to service consumers in near real time.</p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="ReqsDocument.html#Idres">Idres</a></span></dd><dt><span class="dlt_dependent">Dependent</span></dt><dd><span class="dlv_dependent"><a href="Update.html#UpdLogicDynamic">UpdLogicDynamic</a>, <a href="Update.html#UpdManualResolution">UpdManualResolution</a>, <a href="Update.html#UpdStream">UpdStream</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">Upd0Update</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'UpdLogicDynamic' -->
+<h3><a name="UpdLogicDynamic">Dynamic Update Logic</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> implement a mechanism that makes it possible that the logic that performs the updating of the database of the service is defined and changed dynamically during  runtime without any downtime that is noticable by the service consumers.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>The logic that updates the identity mapping and  vessel detils database is the most complex element of the service. Experience shows that it is very difficult to describe a processing  mechanism that works correctly for all the possible input streams for an extended period of time. Hence it is necessary to retain the possibility of redefining the processing rules in order to improve  the quality of the resulting database without any impact or intervention in the hosting environment and consuming applications.</p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">The processing logic could possibly be implemented by using some  scripting language that can be replaced during runtime and interpreted by the processor that is responsible for updating the database.  Alternatively it could be implemented using a compiled language and ensuring that the newly compiled binaries can  replace the old ones during runtime. Ideally the implementation would  support both solutions or leave room for future alternative solutions. Note that the eventual implementation will need to consider the high  performance requirements that apply to high rate message streams.</span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="Update.html#Upd0Update">Upd0Update</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">UpdLogicDynamic</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'UpdManualResolution' -->
+<h3><a name="UpdManualResolution">Manual Conflict Resolution</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> provide an interface for notifying an operator when some data arriving in the input streams could not be  automatically merged into the  database according to the actual update logic. A conventient graphical  user interface must also be provided in order to analyse the  conflict and provide a manual resolution.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>There is very low control over the quality of some data streams  that are used to update the database of the service. It is likely that there will be occurences of conflicts of data that the actual update  processing logic will not be prepared for. Theses situations will need to be resolved manually by an operator. During this process statistics will be collected about the conflicting information that will later  help to improve the processing logic. </p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="Update.html#Upd0Update">Upd0Update</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">UpdManualResolution</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'UpdStream' -->
+<h3><a name="UpdStream">Update Database from Message Stream</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> be able to process a stream of messages and extract any information that is relevant to maintain the  vessel identity and vessel details database.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>Most of the information that is required to maintain the  database of the service is available as a message stream. Even those sources that are not availabe as a stream can be converted to a stream by custom adapters and processors. Being able to use streams as the input to the servcie will therefore cover most of the different  types of data sources.</p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">In case when the database of the service needs to be synchronized with an external database that is not available as a stream of changes an external process can be implemented that regularly converts the entire  external database to stream of messages and sends it to the service for processing.</span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="Update.html#Upd0Update">Upd0Update</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">UpdStream</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div><hr/>
+<span class="footer_text"><p>This document is part of the rmtoo
+requirements documentation and was generated
+by <a href="http://rmtoo.gnu4u.org">rmtoo</a> itself.</p>
+<p>rmtoo is copyright 2010 by flonatel. rmtoo is distributed under
+GPL V3.</p></span>
+</body>
+</html>

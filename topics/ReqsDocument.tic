@@ -1,7 +1,0 @@
-Name: IDRES Requirements
-Text: Requirements of the Identity Resolution and Enrichment Service
-IncludeRequirements: full
-SubTopic: Architecture
-SubTopic: IdentityResolution
-SubTopic: VesselDetails
-SubTopic: Update

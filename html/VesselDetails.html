@@ -1,0 +1,197 @@
+<html>
+<head>
+<title>rmtoo</title>
+<meta name="generator" content="rmtoo">
+<style type="text/css">
+<!--
+h1, h2, h3 {
+   font-family:sans;
+}
+
+a:link, a:visited, a:active, a:hover { 
+   text-decoration:none;
+   font-weight:bold;
+   color:#407cbf;
+}
+
+.fltext {
+   font-family:sans;
+}
+
+.footer_text {
+   font-family:sans;
+   font-size:small;
+}
+
+.requirment_end {
+   background-image:url(../trenner01.png); 
+   margin:0px; 
+   padding:0px;
+   height:2px;
+}
+
+.dlt_description {
+   font-family:sans;
+   font-size:medium;
+   font-weight:bold;
+}
+
+.dlv_description {
+   font-family:sans;
+   font-size:medium;
+}
+
+.dlt_rationale {
+   font-family:sans;
+   font-weight:bold;
+}
+
+.dlv_rationale {
+   font-family:sans;
+}
+
+.dlt_note {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_note {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_depends_on {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_depends_on {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_dependent {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_dependent {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_id {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_id {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_priority {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_priority {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_owner {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_owner {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_invented_on {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_invented_on {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_invented_by {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_invented_by {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_status {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_status {
+   font-family:sans;
+   font-size:small;
+}
+
+.dlt_class {
+   font-family:sans;
+   font-size:small;
+   font-weight:bold;
+}
+
+.dlv_class {
+   font-family:sans;
+   font-size:small;
+}
+
+-->
+</style>
+</head>
+<body>
+<h2>Vessel Details</h2>
+<p><span class="fltext">This section contains requirements about the functionality of providing details about the attributes, status and events of vessels.</span></p>
+
+<!- REQ 'VD0VesselDetails' -->
+<h3><a name="VD0VesselDetails">Vessel Details</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> support the storage and retreival of certain attributes that are attributed to physical vessels and assigned to their logical identities in the database. </span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>Apart from the business identifiers it is often necessary to display or process certain information about vessels that is related to  their physical attributes or actual status. This information should be  stored centrally and made available to other applications so that they can present a consistent view about the vessels to the outside world.  In many ways the processing  rules that apply to business identifiers also apply to all the vessel details. The main difference is that the vessel details are not used in the process of identity resolution and their values are normally not required to  be unique in the maritime domain. There are different kind of possible  values that are to be stored as vessel details and they are described in their corresponding requirement specifications.</p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="ReqsDocument.html#Idres">Idres</a></span></dd><dt><span class="dlt_dependent">Dependent</span></dt><dd><span class="dlv_dependent"><a href="VesselDetails.html#VDDynamic">VDDynamic</a>, <a href="VesselDetails.html#VDEnrichment">VDEnrichment</a>, <a href="VesselDetails.html#VDEvents">VDEvents</a>, <a href="VesselDetails.html#VDExtensibility">VDExtensibility</a>, <a href="VesselDetails.html#VDRequest">VDRequest</a>, <a href="VesselDetails.html#VDStatic">VDStatic</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">VD0VesselDetails</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'VDDynamic' -->
+<h3><a name="VDDynamic">Dynamic Vessel Details</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> provide support for storing and retrieving vessel details that are dynamic in the sense that their value can change during the lifecycle of the vessel.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>Some vessel details, like the name of the vessel can change during  the lifetime of the vessel. The history of the changes of these vessel  details might be interesting for the business, for example in the  case when a user is looking for information about the vessel but only knows a former name of it. Some details might reflect some state of the vessel, for example its navigation status, which might change rather frequently.  The implementation should be prepared to support values that  are expected to change wihout any know limitation on the number  of changes that can happen during the lifetime of the vessel. The service needs to be able to store and retrieve the entire history  of changes assuming that the necessary hardware resources are available.</p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">In certain use cases, taking the enrichment of near real time position  messages as an example, the history of dynamic values might not be important, only their most recent state. The implementation should support the calculation and retrieval of such a  projected value for dynamic vessel details in an efficient way.</span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="VesselDetails.html#VD0VesselDetails">VD0VesselDetails</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">VDDynamic</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'VDEnrichment' -->
+<h3><a name="VDEnrichment">Enrichment of Messages with Vessel Details</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> support the scenario of extending certain messages with some information about the vessel details of  the sender of the message.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>Some existing applications use message streams as their only input source for their processing logic. In order to satisfy their information requirements some additional data about the sender is added  to each message in the stream before they reach the processing application.  In the future it is expected that these applications will be redesigned to use a central service to get that information, which is a more scalable  approach. However, to support the current architecture, it is currently necessary to continue enriching certain message streams with vessel details.  The performance requirements of this functionality is similar to that of the vessel identity resolution service for message streams.</p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">It can be assumed that the enrichment will only be used for message streams that are processed in real time. Therefore the enrichment will only require access to the latest state of the vessel details but not  their history. Similarly to the business identifier this might be  done based on a set of data that is limited in size, growth and update  frequency, which makes it possible to achieve a highly performant  implementation by using local replication.</span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="VesselDetails.html#VD0VesselDetails">VD0VesselDetails</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">VDEnrichment</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'VDEvents' -->
+<h3><a name="VDEvents">Vessel Events</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> support storing certain events that are related to vessels, happen at a speicific time during  the lifetime of a vessel and can be described using a set of  arbitrary attributes.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>Vessel events and dynamic vessel details are closely related in the sense that changes in vessel details are normally the consequence of certain events in the lifetime of the vessel. Very often one can be  deducted from the other. The decision whether a certain information should be modeled one way or the other or maybe both ways depends on the  requirements of how the information will need to be accessed later. In fact most of the elements of message streams, like position reports, status reports, voyage reports,  vessel notifications can be modeled as events and these events can be  processed to maintiain a set of dynamic vessel details that can be  queried in an efficient way. Similarly to dynamic vessel details the  implementation should be prepared to handle a history of events that is  only limited by the amount hardware resources that is allocated for the  purpose. </p></span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="VesselDetails.html#VD0VesselDetails">VD0VesselDetails</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">VDEvents</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'VDExtensibility' -->
+<h3><a name="VDExtensibility">Vessel Details Extensibility</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> be implemented in a way so that the actual set of vessel details that are strored and made accessible  by the service can be changed following well defined and documented procedures with a relatvily low effort.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>The information that is needed to be maintained about vessels and the way that this information needs to be accessed will change over time. In order to be able to adapt to future changes the schema of the  stored data and the associated update procedures and retrieval services  should be separated from the main application logic and should be able  to be changed wihout having a global impact. </p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">Changing the schema of the vessel details does not need to be done dynamically. It is acceptable to shut down the service and maybe some service consumers for doing this kind of update. </span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="VesselDetails.html#VD0VesselDetails">VD0VesselDetails</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">VDExtensibility</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'VDRequest' -->
+<h3><a name="VDRequest">Vessel Details Requests</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> implement a sophisticated interface for querying the vessel details database that takes into consideration the dynamic nature of the database, the performance requirements of the  consuming applications and the different type of values that the vessel details database is required handle.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>Different applications will want to query the vessel details  database in various ways. The type of queries will be similar to those  that one would expect in any current database system with the additional particularities of the data that is extended with the dimension of time.  The type of requests include: searching for a particular value in the static or dynamic vessel details, restricting the search for a dynamic  vessel detail for a particular time or period, retrieveing a list of changes for particular dynamic vessel detail for a given time or period. For events it is necessary to list a certain type of events of a particular vessel for a given time period, or find the closest event of a certain type before or after a certain point in time. </p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">The actual requests do not need to be able to be updated at runtime. Shutting down the service in order to do the update is acceptable.</span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="VesselDetails.html#VD0VesselDetails">VD0VesselDetails</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">VDRequest</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div>
+<!- REQ 'VDStatic' -->
+<h3><a name="VDStatic">Static Vessel Details</a></h3>
+<dl><dt><span class="dlt_description">Description</span></dt><dd><span class="dlv_description"><i>IDRES</i> <b>must</b> support storing vessel details that are static by nature, that is, they do not change during the  lifecycle of the vessel.</span></dd><dt><span class="dlt_rationale">Rationale</span></dt><dd><span class="dlv_rationale"><p>Some physical characteristics, like vessel length or date of  construction do not change during the lifetime of a vessel.  There might be other  cases, where a certain characteristic might change, but only its latest  values is ever relevant for the business. These cases might also  be modeled as static values. </p></span></dd><dt><span class="dlt_note">Note</span></dt><dd><span class="dlv_note">In theory, static vessel details could also be stored as dynamic ones  for which only a single values is stored for all the history of the vessel. However, static values might give room for optimalization and help to achieve higher performance where it is critical.</span></dd><dt><span class="dlt_depends_on">Depends on:</span></dt><dd><span class="dlv_depends_on"><a href="VesselDetails.html#VD0VesselDetails">VD0VesselDetails</a></span></dd><dt><span class="dlt_id">Id</span></dt><dd><span class="dlv_id">VDStatic</span></dd><dt><span class="dlt_priority">Priority</span></dt><dd><span class="dlv_priority">0.00</span></dd><dt><span class="dlt_owner">Owner</span></dt><dd><span class="dlv_owner">emsa</span></dd><dt><span class="dlt_invented_on">Invented on</span></dt><dd><span class="dlv_invented_on">2015-08-01</span></dd><dt><span class="dlt_invented_by">Invented by</span></dt><dd><span class="dlv_invented_by">pappmar</span></dd><dt><span class="dlt_status">Status</span></dt><dd><span class="dlv_status">not done</span></dd><dt><span class="dlt_class">Class</span></dt><dd><span class="dlv_class">detailable</span></dd></dl><div class="requirment_end"> </div><hr/>
+<span class="footer_text"><p>This document is part of the rmtoo
+requirements documentation and was generated
+by <a href="http://rmtoo.gnu4u.org">rmtoo</a> itself.</p>
+<p>rmtoo is copyright 2010 by flonatel. rmtoo is distributed under
+GPL V3.</p></span>
+</body>
+</html>

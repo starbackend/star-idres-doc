@@ -1,4 +1,0 @@
-Name: Architecture
-Text: This section contains requirements about the general architecture
- of \textsl{IDRES}
-IncludeRequirements: full

@@ -1,0 +1,74 @@
+digraph reqdeps {
+rankdir=BT;
+mclimit=10.0;
+nslimit=10.0;ranksep=1;
+subgraph cluster_GRAPH_ReqsDocument {
+ label="Topic: ReqsDocument";
+ "Idres" [fontcolor=red,label="Idres\n[0.00]"];
+ subgraph cluster_GRAPH_Architecture {
+  label="Topic: Architecture";
+  "Arch0Service" [fontcolor=red,label="Arch0Service\n[0.00]"];
+  "ArchExtensibility" [fontcolor=red,label="ArchExtensibility\n[0.00]"];
+  "ArchHighAvailability" [fontcolor=red,label="ArchHighAvailability\n[0.00]"];
+  "ArchScalability" [fontcolor=red,label="ArchScalability\n[0.00]"];
+  }
+ subgraph cluster_GRAPH_IdentityResolution {
+  label="Topic: IdentityResolution";
+  "Map0BusinessIdentifier" [fontcolor=red,label="Map0BusinessIdentifier\n[0.00]"];
+  "MapLogicalIdentifier" [fontcolor=red,label="MapLogicalIdentifier\n[0.00]"];
+  "MapMessageStreamResolution" [fontcolor=red,label="MapMessageStreamResolution\n[0.00]"];
+  "MapReqBusinessTimestampToPeriod" [fontcolor=red,label="MapReqBusinessTimestampToPeriod\n[0.00]"];
+  "MapReqLogicalPeriodToListofBusinessPeriod" [fontcolor=red,label="MapReqLogicalPeriodToListofBusinessPeriod\n[0.00]"];
+  "MapStreamExtensibility" [fontcolor=red,label="MapStreamExtensibility\n[0.00]"];
+  "MapStreamTypeAis" [fontcolor=red,label="MapStreamTypeAis\n[0.00]"];
+  "MapStreamTypeLrit" [fontcolor=red,label="MapStreamTypeLrit\n[0.00]"];
+  "MapStreamTypeVms" [fontcolor=red,label="MapStreamTypeVms\n[0.00]"];
+  "MapTimeDimension" [fontcolor=red,label="MapTimeDimension\n[0.00]"];
+  "MapUnambiguity" [fontcolor=red,label="MapUnambiguity\n[0.00]"];
+  }
+ subgraph cluster_GRAPH_VesselDetails {
+  label="Topic: VesselDetails";
+  "VD0VesselDetails" [fontcolor=red,label="VD0VesselDetails\n[0.00]"];
+  "VDDynamic" [fontcolor=red,label="VDDynamic\n[0.00]"];
+  "VDEnrichment" [fontcolor=red,label="VDEnrichment\n[0.00]"];
+  "VDEvents" [fontcolor=red,label="VDEvents\n[0.00]"];
+  "VDExtensibility" [fontcolor=red,label="VDExtensibility\n[0.00]"];
+  "VDRequest" [fontcolor=red,label="VDRequest\n[0.00]"];
+  "VDStatic" [fontcolor=red,label="VDStatic\n[0.00]"];
+  }
+ subgraph cluster_GRAPH_Update {
+  label="Topic: Update";
+  "Upd0Update" [fontcolor=red,label="Upd0Update\n[0.00]"];
+  "UpdLogicDynamic" [fontcolor=red,label="UpdLogicDynamic\n[0.00]"];
+  "UpdManualResolution" [fontcolor=red,label="UpdManualResolution\n[0.00]"];
+  "UpdStream" [fontcolor=red,label="UpdStream\n[0.00]"];
+  }
+ }
+"Arch0Service" -> "Idres";
+"ArchExtensibility" -> "Arch0Service";
+"ArchHighAvailability" -> "Arch0Service";
+"ArchScalability" -> "Arch0Service";
+"Map0BusinessIdentifier" -> "Idres";
+"MapLogicalIdentifier" -> "Map0BusinessIdentifier";
+"MapMessageStreamResolution" -> "Map0BusinessIdentifier";
+"MapReqBusinessTimestampToPeriod" -> "Map0BusinessIdentifier";
+"MapReqBusinessTimestampToPeriod" -> "MapMessageStreamResolution";
+"MapReqLogicalPeriodToListofBusinessPeriod" -> "Map0BusinessIdentifier";
+"MapStreamExtensibility" -> "Map0BusinessIdentifier";
+"MapStreamTypeAis" -> "Map0BusinessIdentifier";
+"MapStreamTypeLrit" -> "Map0BusinessIdentifier";
+"MapStreamTypeVms" -> "Map0BusinessIdentifier";
+"MapTimeDimension" -> "Map0BusinessIdentifier";
+"MapUnambiguity" -> "Map0BusinessIdentifier";
+"VD0VesselDetails" -> "Idres";
+"VDDynamic" -> "VD0VesselDetails";
+"VDEnrichment" -> "VD0VesselDetails";
+"VDEvents" -> "VD0VesselDetails";
+"VDExtensibility" -> "VD0VesselDetails";
+"VDRequest" -> "VD0VesselDetails";
+"VDStatic" -> "VD0VesselDetails";
+"Upd0Update" -> "Idres";
+"UpdLogicDynamic" -> "Upd0Update";
+"UpdManualResolution" -> "Upd0Update";
+"UpdStream" -> "Upd0Update";
+}
