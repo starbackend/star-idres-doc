@@ -1,0 +1,18 @@
+Name: Updating the Database
+Description: \textsl{IDRES} \textbf{must} provide facilities to continuously 
+ update its database by using the information that is retrieved from
+ external data sources.
+Rationale: The database of the service needs to be continuously updated
+ in order to correctly reflect the actual attributes and status of the 
+ vesseld that it is modelling. The updated state must be reflected in the 
+ responses that are sent to service consumers in near real time.
+Topic: Update
+Solved by: 
+ UpdLogicDynamic
+ UpdManualResolution
+ UpdStream
+Type: requirement
+Status: not done
+Invented on: 2015-08-01
+Invented by: pappmar
+Owner: emsa

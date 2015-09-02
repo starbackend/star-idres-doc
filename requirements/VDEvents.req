@@ -1,0 +1,25 @@
+Name: Vessel Events
+Description: \textsl{IDRES} \textbf{must} support storing certain events
+ that are related to vessels, happen at a speicific time during 
+ the lifetime of a vessel and can be described using a set of 
+ arbitrary attributes.
+Rationale: Vessel events and dynamic vessel details are closely related in
+ the sense that changes in vessel details are normally the consequence of
+ certain events in the lifetime of the vessel. Very often one can be 
+ deducted from the other. The decision whether a certain information should
+ be modeled one way or the other or maybe both ways depends on the 
+ requirements of how the
+ information will need to be accessed later. In fact most of the elements of
+ message streams, like position reports, status reports, voyage reports, 
+ vessel notifications can be modeled as events and these events can be 
+ processed to maintiain a set of dynamic vessel details that can be 
+ queried in an efficient way. Similarly to dynamic vessel details the 
+ implementation should be prepared to handle a history of events that is 
+ only limited by the amount hardware resources that is allocated for the 
+ purpose. 
+Topic: VesselDetails
+Type: requirement
+Status: not done
+Invented on: 2015-08-01
+Invented by: pappmar
+Owner: emsa

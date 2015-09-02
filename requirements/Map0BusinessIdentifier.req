@@ -1,0 +1,35 @@
+Name: Mapping Vessels to Business Identifiers
+Type: requirement
+Description: \textsl{IDRES} \textbf{must} maintain
+ a mapping between logical vessel identifiers that are referring 
+ to existing physical vessels
+ and business identifers that are used in the maritime world to 
+ identify vessels taking into consideration the dynamic nature of 
+ business identifiers.
+Rationale: Business identifiers in the maritime world are assigned by
+ different organization in different countries over different continents. 
+ Business identifiers
+ might change for a given physical vessel and the same business identifer
+ that was once assigned to a certain vessel might be reassigned to a different
+ vessel in the future. Errors might be introduced in the assignment of 
+ business identifiers that might take some time to be resolved by
+ the assigning authority. 
+ \textsl{IDRES} must be prepared to handle such and similar cases 
+ and maintain a consistent database of identifiers that will be consulted 
+ and regarded as a central source of truth by the service consumers.
+Topic: IdentityResolution
+Solved by: 
+ MapLogicalIdentifier 
+ MapReqBusinessTimestampToPeriod
+ MapReqLogicalPeriodToListofBusinessPeriod
+ MapMessageStreamResolution
+ MapStreamExtensibility
+ MapStreamTypeAis
+ MapStreamTypeLrit
+ MapStreamTypeVms
+ MapTimeDimension
+ MapUnambiguity
+Status: not done
+Invented on: 2015-08-01
+Invented by: pappmar
+Owner: emsa

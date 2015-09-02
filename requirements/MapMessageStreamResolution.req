@@ -1,0 +1,33 @@
+Name: Resolving Identity of Senders in a Message Stream
+Type: requirement
+Description: \textsl{IDRES} \textbf{must} provide a service for its 
+ consumers that resolves the identity of senders of messages in a 
+ continuous message stream taking into consideration the related
+ performance requirements.
+Rationale: The frequency of messages in the incoming streams depends
+ on several factors like the number of reporting vessels, the reporting
+ frequency of individual vessels, the coverage of the message receivers,
+ etc. These factors vary between reporting systems and in general there
+ are no well defined upper limits. Hence the identify resolution
+ should be optimized for performance in order to be able to keep up with
+ the message rate of the stream.
+Note: Message reports are normally sent by a specific onboard device
+ at a certain rate. The message contains certain business identifiers
+ that are assigned to the vessel. These identifiers can be used to correlate
+ subsequent messages from the same vessel. The business identifiers 
+ change infrequently if at all during the lifetime of the vessel.
+ The total number of tracked vessels is expected to grow slowly over time. 
+ Hence the size of the database that contains all the business identifiers
+ for all the tracked vessels together with their history is relatively
+ small and slowly extending. It is expected to be feasible to replicate
+ this entire dataset within a few seconds and keep it synchronized with 
+ the central source over the network with a minimal resource requirements. 
+ This could be one possible way to achieve the required performance 
+ of performing identity resolution at the rate of the message stream.
+Topic: IdentityResolution
+Solved by:
+ MapReqBusinessTimestampToPeriod
+Status: not done
+Invented on: 2015-08-01
+Invented by: pappmar
+Owner: emsa

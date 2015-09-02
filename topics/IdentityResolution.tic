@@ -1,0 +1,5 @@
+Name: Identity Resolution
+Text: This section contains the requirements of the functionality of 
+ identifying the sending vessels of messages that are received
+ in a message report stream.
+IncludeRequirements: full

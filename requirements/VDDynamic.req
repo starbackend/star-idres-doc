@@ -1,0 +1,26 @@
+Name: Dynamic Vessel Details
+Description: \textsl{IDRES} \textbf{must} provide support for
+ storing and retrieving vessel details that are dynamic in the sense that
+ their value can change during the lifecycle of the vessel.
+Rationale: Some vessel details, like the name of the vessel can change during 
+ the lifetime of the vessel. The history of the changes of these vessel 
+ details might be interesting for the business, for example in the 
+ case when a user is looking for information about the vessel but only knows
+ a former name of it. Some details might reflect some state of the vessel,
+ for example its navigation status, which might change rather frequently. 
+ The implementation should be prepared to support values that 
+ are expected to change wihout any know limitation on the number 
+ of changes that can happen during the lifetime of the vessel.
+ The service needs to be able to store and retrieve the entire history 
+ of changes assuming that the necessary hardware resources are available.
+Note: In certain use cases, taking the enrichment of near real time position 
+ messages as an example, the history
+ of dynamic values might not be important, only their most recent state. The
+ implementation should support the calculation and retrieval of such a 
+ projected value for dynamic vessel details in an efficient way.
+Topic: VesselDetails
+Type: requirement
+Status: not done
+Invented on: 2015-08-01
+Invented by: pappmar
+Owner: emsa

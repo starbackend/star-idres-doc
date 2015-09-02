@@ -1,0 +1,20 @@
+Name: Implemented as a Service
+Description: \textsl{IDRES} \textbf{must} be implemented as a central service
+ that is accessed by its service consumers using a well defined API.
+Rationale: The API must be designed to be as stable as possible 
+ so that future changes in the service implementation will not 
+ break the functionality of existing service consumers. 
+ The API should have the characteristics of 
+ a request response or an asynchrunous message driven interface. 
+ Its usage needs to be clear and well documented and must not require 
+ implementing any complex logic on the service consumer side.
+Topic: Architecture
+Solved by: 
+ ArchExtensibility
+ ArchHighAvailability
+ ArchScalability
+Type: requirement
+Status: not done
+Invented on: 2015-08-01
+Invented by: pappmar
+Owner: emsa

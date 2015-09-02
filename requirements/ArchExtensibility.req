@@ -1,0 +1,20 @@
+Name: Extensibility
+Description: \textsl{IDRES} \textbf{must} be implemented with extensibility
+ in mind, so that in the future it can be adapted to new requirements
+ or to changes in the existing requirements with relatively low effort.
+Rationale: \textsl{IDRES} will eventually be used by several applications 
+ for varios purposes. The functionalities that it provides are 
+ expected to grow in the future. So is the number of data sources that it
+ will possibly be connected with. It is not possible to foresee all the 
+ possible future use cases and requirements that will need to be implemented.
+ Therefore many of its functionalities need to be designed to be extensible
+ and prepared for future development. 
+Note: This is a general requirement for the entire architecture of the 
+ service. The individual and necessary extension points will be identified 
+ by their own requirements in this document.
+Topic: Architecture
+Type: requirement
+Status: not done
+Invented on: 2015-08-01
+Invented by: pappmar
+Owner: emsa

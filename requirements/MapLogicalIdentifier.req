@@ -1,0 +1,15 @@
+Name: Vessel Identifier
+Type: requirement
+Description: \textsl{IDRES} \textbf{must} introduce the concept of a logical
+ vessel identifier that uniquely identifies a single physical vessel that 
+ exists or existed during a certain period of time.
+Rationale: None of the existing business identifiers in the maritime world is
+ suitable to uniquely identify all tracked vessels. Therefore a new  
+ internal identifier needs to be created for the purpose, the values of which 
+ are unique and provide a clear one-to-one mapping between physical vessels
+ and identifier values. 
+Topic: IdentityResolution
+Status: not done
+Invented on: 2015-08-01
+Invented by: pappmar
+Owner: emsa

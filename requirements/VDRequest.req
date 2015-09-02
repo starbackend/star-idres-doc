@@ -1,0 +1,25 @@
+Name: Vessel Details Requests
+Description: \textsl{IDRES} \textbf{must} implement a sophisticated interface
+ for querying the vessel details database that takes into consideration the
+ dynamic nature of the database, the performance requirements of the 
+ consuming applications and the different type of values that the vessel
+ details database is required handle.
+Rationale: Different applications will want to query the vessel details 
+ database in various ways. The type of queries will be similar to those 
+ that one would expect in any current database system with the additional
+ particularities of the data that is extended with the dimension of time. 
+ The type of requests include: searching for a particular value in the static
+ or dynamic vessel details, restricting the search for a dynamic 
+ vessel detail for a particular time or period, retrieveing a list of changes
+ for particular dynamic vessel detail for a given time or period.
+ For events it is necessary to list a certain type of events of a particular
+ vessel for a given time period, or find the closest event of a certain type
+ before or after a certain point in time. 
+Note: The actual requests do not need to be able to be updated at runtime.
+ Shutting down the service in order to do the update is acceptable.
+Topic: VesselDetails
+Type: requirement
+Status: not done
+Invented on: 2015-08-01
+Invented by: pappmar
+Owner: emsa

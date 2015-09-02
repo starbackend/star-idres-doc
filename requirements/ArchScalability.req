@@ -1,0 +1,20 @@
+Name: Scalability
+Description: \textsl{IDRES} \textbf{must} implemented with scalability 
+ in mind, so that the number of requests that the service is able 
+ to respond to without any major degradation in the performance is 
+ proportional to the hardware and software resources 
+ that are allocated to it.
+Rationale: The frequency of the requests that the service will need to respond 
+ to depends on several factors like the number of service consumer
+ applications, the number of reporting vessels, the reporting
+ frequency of individual vessels, the area covered by message receivers,
+ etc. These factors vary between reporting systems and in general 
+ they are expected to increase over time without any well defined upper limits. 
+ For this reason \textsl{IDRES} must be be able to handle increased load 
+ assuming that the necessary hardware resources are available.
+Topic: Architecture
+Type: requirement
+Status: not done
+Invented on: 2015-08-01
+Invented by: pappmar
+Owner: emsa

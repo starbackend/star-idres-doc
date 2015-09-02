@@ -1,0 +1,4 @@
+Name: Vessel Details
+Text: This section contains requirements about the functionality of providing
+ details about the attributes, status and events of vessels.
+IncludeRequirements: full
